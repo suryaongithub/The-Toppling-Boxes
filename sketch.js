@@ -4,7 +4,7 @@ var world
 var ground;
 var boxes;
 var group_1;
-var ref;
+
 var boxes=[];
 
 const Engine = Matter.Engine;
@@ -17,8 +17,7 @@ const Body = Matter.Body;
 function setup() {
   createCanvas(400,400);
 
-  ref=0;
-  // group_1 = new Group();
+  
 
   engine = Engine.create();
   world = engine.world;
@@ -42,13 +41,12 @@ function draw()
 
   Engine.update(engine);
   
-  if(ref===1)
-  {
+  
     for (var i = 0 ;boxes.length>i;i++)
     {
       boxes[i].display()
     }
-  }
+  
 }
 
 function mousePressed ()
