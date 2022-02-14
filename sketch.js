@@ -49,10 +49,15 @@ function draw()
   
 }
 
-function mousePressed ()
+function mousePressed()
 {
-  boxes[boxes.length] = new Box (mouseX,mouseY,20,20);
- ref=1;
+  boxes[boxes.length] = new Box (mouseX,mouseY,Math.round(random(10,30)),Math.round(random(10,30)));
+ }
+
+function anyOne(array)
+{
+  return array[Math.round(random(0,array.length-1))];
+  
 }
 
-// MADE BY SURYA
+// MADE BY SURYA 
