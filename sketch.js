@@ -7,6 +7,12 @@ var group_1;
 
 var boxes=[];
 
+var box1 = {
+  width : 25,
+  heigth : 25,
+  colour : "white"
+}
+
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -26,7 +32,10 @@ function setup() {
   World.add(world,ground);
   rectMode(CENTER);
 
-  console.log(boxes.length);
+ console.log("hey there");
+ console.log("welcome to toppling boxes");
+ console.log("if you want to change the colour of the box then you can use the command 'changeColour(name of your colour in quotes)'");
+console.log('if you want to change the size of the box then you can use the command "changeSize(width,heigth)"')
 }
 
 
@@ -51,7 +60,7 @@ function draw()
 
 function mousePressed()
 {
-  boxes[boxes.length] = new Box (mouseX,mouseY,Math.round(random(10,30)),Math.round(random(10,30)));
+  boxes[boxes.length] = new Box (mouseX,mouseY,box1.width,box1.heigth,box1.colour);
  }
 
 function anyOne(array)
@@ -60,4 +69,37 @@ function anyOne(array)
   
 }
 
+function changeSize(width,heigth)
+{
+  box1.width=width;
+  box1.heigth=heigth;
+  
+
+  return 'okay';
+}
+
+function changeColour(colour)
+{
+  
+  box1.colour = colour;
+  return "nice"
+  
+}
+
+function changesize(width,heigth)
+{
+  box1.width=width;
+  box1.heigth=heigth;
+  
+
+  return 'okay';
+}
+
+function changecolour(colour)
+{
+  
+  box1.colour = colour;
+  return "nice"
+  
+}
 // MADE BY SURYA 
